@@ -1,15 +1,20 @@
 import * as React from 'react';
 import MapView from 'react-native-maps';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
+//import { Searchbar } from 'react-native-paper';
 //import { Header } from 'react-native/Libraries/NewAppScreen';
-import Screen from './components/screen';
+//import Screen from './components/screen';
+import searchBar from './components/searchBar';
+
 
 
 export default function App() {
   
   return (
+    
     <View  style={styles.container}>
       <Text style={styles.titleText}>PET CONTACT</Text>
+      
       <MapView style={styles.map} 
           initialRegion={{
           latitude: 9.928069,
@@ -20,6 +25,7 @@ export default function App() {
         />
         
       </View>
+      
   );
 }
 

@@ -1,37 +1,19 @@
-// import * as React from 'react';
-// import MapView from 'react-native-maps';
-// import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import React from "react";
+import {View, StatusBar, StyleSheet} from 'react-native';
 
-// export default function Screen() {
-//   return (
-      
-//     <View style={styles.container}>
-        
-//         <MapView style={styles.map} 
-//           initialRegion={{
-//           latitude: 9.928069,
-//           longitude: -84.090725,
-//           latitudeDelta: 0.0922,
-//           longitudeDelta: 0.0421,
-//         }}
-//         />
-        
-//       </View>
-      
-//   );
-// }
+const Screen = (children)=> {
+    return(
+        <View style={styles.container}>
+            {children}
+        </View>
+    )
+}
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#2ec76e',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-//   map: {
-//     marginTop: 740,
-//     width: Dimensions.get('window').width,
-//     height: Dimensions.get('window').height,
-//   },
-  
-// });
+const styles = StyleSheet.create({
+    container:{
+        marginTop: StatusBar.currentHeight,
+        paddingHorizontal: 15,
+    },
+});
+
+export default Screen;
