@@ -3,7 +3,7 @@ import MapView from "react-native-maps";
 import {StyleSheet, Dimensions, Image} from 'react-native'
 
 const height = Dimensions.get('window').height
-    
+    //Agregar puntos de navegación en el mapa
     const response = [
       {
         id: '1',
