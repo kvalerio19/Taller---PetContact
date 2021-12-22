@@ -4,8 +4,6 @@ import { StyleSheet, Text, View, Dimensions, TextInput, SafeAreaView, Button } f
 //import { Button} from 'react-native-paper';
 
 
-
-
 export default function App() {
   
   return (
@@ -14,7 +12,7 @@ export default function App() {
       
       <Text style={styles.titleText}>PET CONTACT</Text>
       <TextInput style={styles.input} placeholder='Search Veterinarian'></TextInput>
-      <MapView style={styles.map} 
+      { <MapView style={styles.map} 
           initialRegion={{
           latitude: 9.928069,
           longitude: -84.090725,
@@ -22,11 +20,13 @@ export default function App() {
           longitudeDelta: 0.0421,
         }}
         
-        />
+        /> }
+        
         
         <SafeAreaView style={styles.button}>
           <View>
-            <Button title='Navigate' onPress={() => Alert.alert('Button')}></Button>
+            
+            <Button title='Navigate'></Button>
           </View>
         </SafeAreaView>
       </View>
